@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      `https://sonix-movies-v2-beta.vercel.app/api/get-movie-links?tmdbId=${tmdbId}&header=02movie`
+      `https://02moviev2vercel.vercel.app/api/get-movie-links?tmdbId=${tmdbId}&header=02movie`
     );
 
     const data = await response.json();
@@ -21,3 +21,4 @@ export default async function handler(req, res) {
     res.status(500).json({ success: false, message: 'Server error', error: error.message });
   }
 }
+
